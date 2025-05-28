@@ -1,5 +1,6 @@
 ﻿using Wpm.Management.Domain.Interfaces;
 using Wpm.Management.Domain.ValueObjects;
+using Wpm.SharedKernel;
 
 namespace Wpm.Management.Domain.Entities
 {
