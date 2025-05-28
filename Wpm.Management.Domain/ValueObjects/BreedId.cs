@@ -15,6 +15,17 @@ namespace Wpm.Management.Domain.ValueObjects
             Value = value;
         }
 
+        // crear un objeto breedId saltandose la validacion. esto es necesario para el dbcontext cuando llena un objeto breedId
+        private BreedId(Guid value)
+        {
+            this.Value = value;
+        }
+
+        public static BreedId FromCreate(Guid value)
+        {
+            return new BreedId(value);
+        }
+
         private void ValidateBreed(Guid value)
         {
             var result = _breedService.GetBreed(value);
